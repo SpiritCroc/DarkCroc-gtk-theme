@@ -1,6 +1,6 @@
 # Numix GTK Theme
 
-gtk-color-scheme = "bg_color:#fffeee\nfg_color:#555555\nbase_color:#ffffff\ntext_color:#303030\nselected_bg_color:#8bc34a\nselected_fg_color:#ffffff\ntooltip_bg_color:#424242\ntooltip_fg_color:#fffeee\ntitlebar_bg_color:#424242\ntitlebar_fg_color:#fffddd\nmenubar_bg_color:#424242\nmenubar_fg_color:#fffddd\ntoolbar_bg_color:#fffeee\ntoolbar_fg_color:#555555\nmenu_bg_color:#424242\nmenu_fg_color:#fffddd\npanel_bg_color:#424242\npanel_fg_color:#fffddd\nlink_color:#f06860"
+gtk-color-scheme = "bg_color:#424242\nfg_color:#ffffff\nbase_color:#303030\ntext_color:#ffffff\nselected_bg_color:#8bc34a\nselected_fg_color:#ffffff\ntooltip_bg_color:#424242\ntooltip_fg_color:#ffffff\ntitlebar_bg_color:#424242\ntitlebar_fg_color:#ffffff\nmenubar_bg_color:#424242\nmenubar_fg_color:#ffffff\ntoolbar_bg_color:#424242\ntoolbar_fg_color:#ffffff\nmenu_bg_color:#424242\nmenu_fg_color:#ffffff\npanel_bg_color:#424242\npanel_fg_color:#ffffff\nlink_color:#8bc34a"
 
 gtk-icon-sizes = "inkscape-decoration=16,16:gtk-small-toolbar=16,16"
 
