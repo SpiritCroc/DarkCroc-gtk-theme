@@ -18,3 +18,4 @@ replace_color d8d8d8 b3b3b3
 
 # Accent
 replace_color f0544c 8bc34a
+replace_color f1544d 8bc34a
