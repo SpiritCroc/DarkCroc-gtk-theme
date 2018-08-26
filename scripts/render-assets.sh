@@ -3,32 +3,27 @@
 INKSCAPE="/usr/bin/inkscape"
 OPTIPNG="/usr/bin/optipng"
 
-SRC_FILE="../src/assets/all-assets.svg"
-ASSETS_DIR="../src/assets"
-INDEX="../src/assets/all-assets.txt"
+SRC_FILE="src/assets/all-assets.svg"
+ASSETS_DIR="src/assets"
+INDEX="src/assets/all-assets.txt"
 
-for i in `cat $INDEX`
-do 
-if [ -f $ASSETS_DIR/$i.png ]; then
-    echo $ASSETS_DIR/$i.png exists.
-else
-    echo
+for i in `cat $INDEX`; do
+    if [ -f $ASSETS_DIR/$i.png ]; then
+        rm $ASSETS_DIR/$i.png
+    fi
     echo Rendering $ASSETS_DIR/$i.png
     $INKSCAPE --export-id=$i \
               --export-id-only \
               --export-png=$ASSETS_DIR/$i.png $SRC_FILE >/dev/null #\
-    # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
-fi
-if [ -f $ASSETS_DIR/$i@2.png ]; then
-    echo $ASSETS_DIR/$i@2.png exists.
-else
-    echo
+    # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png
+    if [ -f $ASSETS_DIR/$i@2.png ]; then
+        rm $ASSETS_DIR/$i@2.png
+    fi
     echo Rendering $ASSETS_DIR/$i@2.png
     $INKSCAPE --export-id=$i \
               --export-dpi=180 \
               --export-id-only \
               --export-png=$ASSETS_DIR/$i@2.png $SRC_FILE >/dev/null #\
-    # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png 
-fi
+    # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png
 done
 exit 0
