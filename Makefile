@@ -36,8 +36,6 @@ clean:
 
 install: all
 	$(UTILS) install $(INSTALL_DIR)
-	@echo
-	@echo To avoid GTK 2 issues, please call \'export GTK2_RC_FILES=$(INSTALL_DIR)/gtk-2.0/gtkrc\' before launching gtk-2.0 applications, e.g. by adding it to your .xinitrc!
 
 uninstall:
 	rm -rf $(INSTALL_DIR)
