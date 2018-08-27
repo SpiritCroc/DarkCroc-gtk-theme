@@ -1,5 +1,5 @@
 ## DarkCroc GTK
-##### A modern flat dark theme based on [Numix](https://github.com/numixproject/numix-gtk-theme) by [The Numix Project](https://numixproject.org/).
+##### A modern flat dark theme based on [Numix](https://github.com/numixproject/numix-gtk-theme) by [The Numix Project](https://numixproject.org/), inspired by the dark material color scheme as used on Android/AOSP.
 
 ## Build It
 
@@ -23,6 +23,17 @@ After installing all the dependencies, change to the cloned directory and, run t
 ```sh
 sudo make install
 ```
+
+#### For developers
+If you want to hack on the theme, make sure you have the `inotifywait` command available, which is used for watching and automatically building the files.
+
+To start watching for changes, run the following,
+
+```sh
+make watch
+```
+
+If you change any assets, you'll need to regenerate the `gtk.gresource.xml` and `gtk.gresource` files. You can use [grrr](https://github.com/satya164/grrr) to do it easily.
 
 ## Apply it
 
@@ -51,24 +62,13 @@ This can look bad with some websites, sometimes even leading to unreadable text.
 To work around it, you can go to `about:config` and set `widget.content.gtk-theme-override` (add it as a string pref if it doesn't exist yet) to a light theme of your choice, e.g. `Adwaita:light` ([source](https://www.reddit.com/r/firefox/comments/6rbvvw/photon_rectangular_tabs_have_landed_in_nightly/dl4318f/)).
 After restarting firefox, you should be fine again.
 
-#### For developers
-If you want to hack on the theme, make sure you have the `inotifywait` command available, which is used for watching and automatically building the files.
-
-To start watching for changes, run the following,
-
-```sh
-make watch
-```
-
-If you change any assets, you'll need to regenerate the `gtk.gresource.xml` and `gtk.gresource` files. You can use [grrr](https://github.com/satya164/grrr) to do it easily.
-
-### Requirements
+## Requirements
 
 GTK+ 3.18 or above
 
 Murrine theme engine
 
-### Code and license
+## Code and license
 
 Report bugs or contribute at [GitHub](https://github.com/SpiritCroc/DarkCroc-gtk-theme)
 
