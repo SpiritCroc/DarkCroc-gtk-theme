@@ -28,7 +28,7 @@ sudo make install
 
 ### GTK 3
 
-In ~/.config/gtk-3.0/settings.ini, put
+In `~/.config/gtk-3.0/settings.ini`, put
 
 ```sh
 gtk-theme-name=DarkCroc
@@ -42,7 +42,7 @@ Run
 export GTK2_RC_FILES=/usr/share/themes/DarkCroc/gtk-2.0/gtkrc
 ```
 
-before launching gtk-2.0 applications, e.g. by adding it to your .xinitrc.
+before launching gtk-2.0 applications, e.g. by adding it to your `.xinitrc`.
 
 ### Firefox
 
