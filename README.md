@@ -44,6 +44,13 @@ export GTK2_RC_FILES=/usr/share/themes/DarkCroc/gtk-2.0/gtkrc
 
 before launching gtk-2.0 applications, e.g. by adding it to your .xinitrc.
 
+### Firefox
+
+By default, Firefox uses the system GTK 3 theme also for input boxes within websites.
+This can look bad with some websites, sometimes even leading to unreadable text.
+To work around it, you can go to `about:config` and set `widget.content.gtk-theme-override` (add it as a string pref if it doesn't exist yet) to a light theme of your choice, e.g. `Adwaita:light` ([source](https://www.reddit.com/r/firefox/comments/6rbvvw/photon_rectangular_tabs_have_landed_in_nightly/dl4318f/)).
+After restarting firefox, you should be fine again.
+
 #### For developers
 If you want to hack on the theme, make sure you have the `inotifywait` command available, which is used for watching and automatically building the files.
 
