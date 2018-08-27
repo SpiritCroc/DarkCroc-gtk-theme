@@ -218,10 +218,11 @@ style "murrine-overlay-scrollbar" {
 }
 
 style "murrine-scale" = "murrine-thin" {
-	bg[NORMAL] = @bg_color
+	bg[NORMAL] = @fg_secondary_color
+	bg[PRELIGHT] = @fg_color
 	bg[ACTIVE] = @bg_color
 	bg[SELECTED] = @selected_bg_color
-	bg[INSENSITIVE] = shade (0.95, @bg_color)
+	bg[INSENSITIVE] = @bg_color
 
 	engine "murrine" {
 		roundness = 8
@@ -653,8 +654,8 @@ style "chrome-gtk-frame" {
 	ChromeGtkFrame::incognito-frame-gradient-color = @titlebar_bg_color
 
 	ChromeGtkFrame::scrollbar-trough-color = @bg_color
-	ChromeGtkFrame::scrollbar-slider-normal-color =  mix (0.21, @fg_color, @bg_color)
-	ChromeGtkFrame::scrollbar-slider-prelight-color =  mix (0.31, @fg_color, @bg_color)
+	ChromeGtkFrame::scrollbar-slider-normal-color = @inactive_color
+	ChromeGtkFrame::scrollbar-slider-prelight-color = @fg_secondary_color
 }
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
