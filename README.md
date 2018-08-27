@@ -24,6 +24,26 @@ After installing all the dependencies, change to the cloned directory and, run t
 sudo make install
 ```
 
+## Apply it
+
+### GTK 3
+
+In ~/.config/gtk-3.0/settings.ini, put
+
+```sh
+gtk-theme-name=DarkCroc
+```
+
+### GTK 2
+
+Run
+
+```sh
+export GTK2_RC_FILES=/usr/share/themes/DarkCroc/gtk-2.0/gtkrc
+```
+
+before launching gtk-2.0 applications, e.g. by adding it to your .xinitrc.
+
 #### For developers
 If you want to hack on the theme, make sure you have the `inotifywait` command available, which is used for watching and automatically building the files.
 
